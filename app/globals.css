@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 250 250 250;
+    --foreground: 33 33 33;
+    --card: 255 255 255;
+    --card-foreground: 33 33 33;
+    --primary: 143 184 143;
+    --primary-foreground: 255 255 255;
+    --accent: 241 194 125;
+    --accent-foreground: 33 33 33;
+    --muted: 245 245 245;
+    --muted-foreground: 115 115 115;
+    --border: 224 224 224;
+
+    --radius-default: 0.5rem;
+    --radius-large: 0.75rem;
+    --radius-pill: 9999px;
+
+    --icon-size-small: 1rem;
+    --icon-size-medium: 1.5rem;
+    --icon-size-large: 2rem;
+  }
+
+  .dark {
+    --background: 33 33 33;
+    --foreground: 250 250 250;
+    --card: 41 41 41;
+    --card-foreground: 250 250 250;
+    --primary: 143 184 143;
+    --primary-foreground: 33 33 33;
+    --accent: 241 194 125;
+    --accent-foreground: 33 33 33;
+    --muted: 48 48 48;
+    --muted-foreground: 163 163 163;
+    --border: 48 48 48;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.icon-small {
+  width: var(--icon-size-small);
+  height: var(--icon-size-small);
+}
+
+.icon-medium {
+  width: var(--icon-size-medium);
+  height: var(--icon-size-medium);
+}
+
+.icon-large {
+  width: var(--icon-size-large);
+  height: var(--icon-size-large);
+}
+
